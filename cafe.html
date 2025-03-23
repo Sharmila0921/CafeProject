@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafe Website</title>
+        <style>
+            /* General Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            h3{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            h1{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-shadow: 2px 1px rgba(220, 11, 11, 0.788);
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            body {
+                background-color: #f2f2f2;
+            }
+
+            .navbar {
+                background-color: #111;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                padding: 15px 20px;
+                color: #f1e6e6;
+                font-size: 18px;
+                transition: color 0.3s ease-in-out;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .navbar a:hover {
+                color: #f9a826;
+            }
+
+            /* Hero Section */
+            .hero-section {
+                background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231031/pngtree-stylish-coffee-cups-resting-on-a-black-textured-wallpaper-image_13763661.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                position: relative;
+            }
+
+            .hero-section h1 {
+                font-size: 80px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .hero-section h1 {
+                position: relative;
+                z-index: 1;
+            }
+
+            /* Menu Section */
+            .menu-section {
+                background-color: #fff;
+                padding: 50px 0;
+            }
+
+            .menu-section h2 {
+                text-align: center;
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+
+            .menu-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+               
+            }
+
+            .menu-item {
+                text-align: center;
+                max-width: 250px;
+            }
+
+            .menu-item img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .menu-item h3 {
+                margin-top: 15px;
+                font-size: 18px;
+                color: #333;
+            }
+      
+            .menu-section, .shop-section {
+                background: #f5ebe0; 
+                padding: 50px 0;
+            }
+
+  
+            .menu-section + .shop-section {
+                margin-top: -1px; 
+            }
+            .menu-section {
+                background: linear-gradient(to bottom, #f7e6d5, #f5ebe0);
+            }
+
+            .shop-section {
+                background: linear-gradient(to bottom, #f5ebe0, #f3e1cb);
+            }
+
+
+
+            /* About Us Section */
+            .about-section {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://w0.peakpx.com/wallpaper/838/965/HD-wallpaper-coffee-beans-background-with-coffee-falling-coffee-grains-coffee-concepts-coffee-background.jpg');
+                /* background-image: url('https://w0.peakpx.com/wallpaper/838/965/HD-wallpaper-coffee-beans-background-with-coffee-falling-coffee-grains-coffee-concepts-coffee-background.jpg'); */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: white;
+                padding: 50px 20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 500px;
+                
+            }
+
+            .about-section h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .about-section p {
+                max-width: 800px;
+                line-height: 1.6;
+                font-size: 18px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            /* Footer Section */
+            .footer {
+                background-color: #111;
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+            }
+
+            .footer p {
+                font-size: 16px;
+            }
+            img:hover{
+                border-radius: 150px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#menu">MENU</a>
+            <a href="#shop">SHOP</a>
+            <a href="#aboutus">ABOUT US</a>
+            <a href="visit.html">VISIT</a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section" id="home">
+            <h1>Coffee Heaven</h1>
+        </div>
+
+        <!-- Menu Section -->
+        <section class="menu-section" id="menu">
+            <h2>Our Coffee Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0630/3685/0384/files/Hot_Espresso_Coffee_in_a_transparent_glass_cup.jpg?v=1716979289" alt="Espresso">
+                    <h3>Espresso</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://citykitchendfw.com/wp-content/uploads/2020/08/coffee3.jpg" alt="Regular Coffee">
+                    <h3>Regular Coffee</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQESoCM08oJ5oLnpB6opT9lTMyh77wOBlFSpw&s" alt="Salted Caramel Machiatto">
+                    <h3>Salted Caramel Macchiato</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.nescafe.com/gb/sites/default/files/2023-08/long-black-coffee-what-is-it-1066x970.jpg" alt="Black Coffee">
+                    <h3>Black Coffee</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://skydecklounge.in/wp-content/uploads/2022/01/Cafe-Latte-Coffee.jpg" alt="Latte">
+                    <h3>Latte</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.nescafe.com/mt/sites/default/files/2023-04/RecipeHero_CaramelLatte_1066x1066.jpg" alt="Caramel Latte">
+                    <h3>Caramel Latte</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://img.freepik.com/premium-photo/iced-americano-coffee-glass-bar-cafe_213396-399.jpg" alt="Iced Americano">
+                    <h3>Iced Americano</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCW5QYy7pbIXSfjOyWObPX8Q8VV0atmMxww&s" alt="Americano">
+                    <h3>Americano</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cappucino-32dbfba.jpg?quality=90&resize=440,400" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.butteredsideupblog.com/wp-content/uploads/2021/04/How-to-Make-a-Mocha-Latte-65.jpg" alt="Mocha Latte">
+                    <h3>Mocha Latte</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section class="menu-section" id="shop">
+            <h2>Shop</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://countrybean.in/cdn/shop/products/Artboard16_f8774132-2628-455b-9850-6623813b2b34.jpg?v=1664440310&width=1445" alt="Espresso">
+                    <h3>Vanilla instant Powder</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/l071d3k0/coffee/5/t/c/50-hazelnut-instant-coffee-powder-freeze-dried-flavoured-coffee-original-imagcfggyaryzmzb.jpeg?q=90&crop=false" alt="Regular Coffee">
+                    <h3>Hazelnut Instant Powder</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://d3kgrlupo77sg7.cloudfront.net/media/chococoorgspice.com/images/products/medium/premium-coffee-infused-chocolate.20240221015739.webp" alt="Salted Caramel Machiatto">
+                    <h3>Coorg Flavoured Powder</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://countrybean.in/cdn/shop/files/stc.jpg?v=1685004651&width=360" alt="Black Coffee">
+                    <h3>Strawberry Powder</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.bevzilla.co/cdn/shop/files/1_60bfd8b2-2b6f-4021-a8cb-820252bc518f.jpg?v=1695735675" alt="Latte">
+                    <h3>Arabica Choco Mocha Powder</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://countrybean.in/cdn/shop/products/Caramel.jpg?v=1660133920&width=360" alt="Caramel Latte">
+                    <h3>Caramel Powder</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://countrybean.in/cdn/shop/files/Untitled-1_1.jpg?v=1691497590" alt="Iced Americano">
+                    <h3>Blueberry Instant Powder</h3>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section" id="aboutus">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Coffee Heaven, where every cup tells a story and every bite is a moment to savor. 
+                Nestled in the heart of the city, we are more than just a cafe; we're a community gathering spot,
+                a haven for coffee lovers, and a place where the aroma of freshly brewed coffee and baked goods fills the air.
+            </p>
+            <br>
+            <p>
+                At Coffee Heaven, we believe that everyone deserves the perfect cup of coffee. 
+                From caramel lattes to mocha lattes, we have something for every coffee lover.
+            </p>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2024 Coffee Heaven. All Rights Reserved.</p>
+        </footer>
+
+    </body>
+</html>
